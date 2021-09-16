@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about cocktails !">
+    <base target="_self">
+    <!-- web icon -->
+    <link rel="icon" href="./cocktail.png" sizes="16x16">
+    <!-- content icon: https://fontawesome.com/ -->
+    <script src="https://kit.fontawesome.com/c93c5eb6dd.js" crossorigin="anonymous"></script>
+    <!-- google chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Cocktails', 'favorite'],
+          ['gin tonic', 15],
+          ['old fashion', 35],
+          ['negroni', 20],
+          ['magarita', 30],
+          ['martini', 25]
+        ]);
+
+        var options = {
+          title: 'Top Cocktails'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <title>My Bar</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h1>MAKE ME A COCKTAIL</h1>
+        <h3>The world's best cocktail resource</h3>
+    </header>
+    
+    <nav>
+        <ul>
+            <li class="active"><a href="./Index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./Cocktails.html"><i class='fas fa-cocktail'></i> Cocktails</a></li>
+            <li><a href="./Ingredients.html"><i class='fas fa-flask'></i> Ingredients</a></li>
+            <li><a href="./MyBar.html"><i class="fas fa-glass-cheers"></i> My Bar</a></li>
+        </ul>
+    </nav>
+    <!-- bookmark -->
+    <aside>
+        <h2>Catolog</h2>
+        <ul>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#award">Awards</a></li>
+            <li><a href="#comment">Comments</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section class="primary">
+            <h2 id="info">Info</h2>
+            <p>
+                MyBar.com is dedicated to good drinking and great living. We inspire, entertain and educate anyone—and everyone—interested in what happens in the glass and out of it. Cocktail recipes; home bar know-how; bottle recommendations; industry intel and job advice for the bar professional; profiles of the people who matter; the bars and cities to visit—if it centers on the act of drinking and how to live life to the fullest, Liquor.com will tell its story. Our readership is diverse. Everyone from a curious drinker seeking a recipe to a top-tier bar professional researching how to reduce their business’ overhead relies on Liquor.com as a valued resource.
+                We create entertaining and educational content and experiences that inspire good drinking and great living, as well as educational content and industry experiences that help working bartenders and other trade professionals develop their skills, advance their careers and achieve greater work-life balance.
+            </p>
+
+            <iframe src="https://www.youtube.com/embed/_UFiGai-8RA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>
+            <h2 id="award">Awards</h2>
+            <ul>
+                <li>2020 Tales of the Cocktail Foundation Spirited Award Top 10 Nominee for Best Cocktail & Spirits Publication</li>
+                <li>2020 Tales of the Cocktail Foundation Spirited Award Top 10 Nominee for Best Cocktail & Spirits Writing</li>
+                <li>2013 James Beard Foundation Broadcast and New Media Award Winner for Video Webcast, Fixed Location and/or Instructional</li>
+                <li>2012 Tales of the Cocktail Foundation Spirited Award Winner for Best Cocktail & Spirits Publication</li>
+            </ul> 
+        </section>
+        <section class="sub">
+            <h2 id="comment">Comments</h2>
+            <p>
+                MyBar.com has partnered with Disqus to add a comment section to our recipes. Through comments, Liquor.com is looking to foster a safe place for readers to share feedback, tips and thoughts about recipes they have read. Comments are moderated. Our comment guidelines are simple: If a comment is respectful and relevant, it will be published. If a comment is disrespectful, not relevant to the article, from an untrustworthy source or spammy, it will not be published.
+            </p>
+            <div id="piechart"></div>
+        </section>
+    </main>
+
+    
+
+    
+
+    
+</body>
+</html>

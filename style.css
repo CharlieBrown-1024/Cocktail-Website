@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+header{
+    background-color: #C6CDCA;
+    padding: 1rem 1.25rem;
+
+    /* margin: 0.25rem; */
+}
+
+nav{
+    background-color: #F5D787;
+
+    padding-left: 1rem;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+
+}
+nav ul li{
+    
+}
+nav ul li a{
+    display: block;
+    padding: 0.25rem 1rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover{
+    color: white;
+    background-color: cadetblue;  
+}
+aside {
+    text-align: center;
+    margin: 2rem 2rem;
+    padding: 0.75rem 1rem;
+
+}
+aside ul{
+    padding: 1rem 1.5rem;
+    list-style-image: url(./cocktail2.png);
+    list-style-position: inside;
+}
+aside ul li a{
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+aside ul li a:hover{
+    background-color: #F5D787;
+    color: white;
+}
+main{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+section.primary{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    flex: 4 1 400px;
+}
+
+
+section.primary p{ 
+    padding: 1rem 2rem;
+}
+
+section.primary ul{ 
+    padding: 1rem 2rem;
+    transition: all 0.5 ease;
+}
+
+section.primary ul li:hover{
+    background-color: black;
+    color:white;
+}
+
+section.sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    flex: 1 1 300px;
+}
+
+section.sub p{
+    padding: 1rem 2rem;
+}
+
+.active{
+    background-color: #daa71e;
+}
+
+#piechart{
+    width: 400px;
+    height: 300px;
+}
+
+iframe{
+    padding: 1.5rem;
+    width: 600px;
+    height: 400px;
+}
+
+/* turn into vertical navigation bar */
+@media screen and (max-width: 650px) {
+    nav{
+        padding-left: 0;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li a{
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    #piechart{
+        width: 100%;
+        height: 100%;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
